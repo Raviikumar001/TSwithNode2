@@ -4,12 +4,14 @@ import bodyparser from 'body-parser';
 import cookieParser from 'cookie-parser';
 import compression from 'compression';
 import cors from 'cors';
+
 import mongoose, { Mongoose } from 'mongoose';
 const app = express();
 
 app.use(cors({
     credentials: true
 }));
+
 
 app.use(compression());
 app.use(cookieParser());
@@ -26,4 +28,4 @@ mongoose.Promise = Promise;
 mongoose.connect(MONGO_URL);
 mongoose.connection.on('error', (error: Error)=>{
     console.log(error);
-})
+})      
