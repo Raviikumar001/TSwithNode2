@@ -3,6 +3,8 @@ import express from 'express';
 import { getUserByEmail, createUser } from '../db/user';
 import { random, authentication } from '../helpers';
 
+//login function for login functionality
+
 export const login = async (req: express.Request, res: express.Response)=>{
 
     try{
