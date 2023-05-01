@@ -47,6 +47,8 @@ export const login = async (req: express.Request, res: express.Response)=>{
     }
 }
 
+//register function for user
+
 export const register = async(req: express.Request, res: express.Response)=>{
 
     try{
