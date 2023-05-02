@@ -1,5 +1,6 @@
 import mongoose, { mongo } from "mongoose";
 
+//user schema for user
 const userSchema = new mongoose.Schema({
   username: { type: String, required: true },
   email: { type: String, required: true },
@@ -19,6 +20,7 @@ const userSchema = new mongoose.Schema({
 });
 
 export const UserModel = mongoose.model("User", userSchema);
+
 
 export const getUsers = ()=> UserModel.find();
 export const getUserByEmail = (email: string) => UserModel.findOne({ email });
